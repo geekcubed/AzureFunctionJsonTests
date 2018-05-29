@@ -18,7 +18,7 @@ An Azure Functions (V1) app (.Net Full Framework 4.7.2).
 This setup is a representative example of our production architecture. Both Projects include an explict reference to `Newtonsoft.Json` version 10.0.3
 
 # Observed Behaviour
-Deserializing JSON with "complex" properties (nested objects) to anonymous objects (e.g. `Dictionary<string, object>`) results in those complex properties being represented as `JObjects (`Newtonsoft.Json.Linq.JObject`).  At the point of deserisling, and passing these into the data project, Type checking is working as expected:
+Deserializing JSON with "complex" properties (nested objects) to anonymous objects (e.g. `Dictionary<string, object>` ) results in those complex properties being represented as `JObjects` (`Newtonsoft.Json.Linq.JObject`).  At the point of deserisling, and passing these into the data project, Type checking is working as expected:
 
 ```
 sprocketItem["Supplier"].GetType().FullName; //"Newtonsoft.Json.Linq.JObject"
